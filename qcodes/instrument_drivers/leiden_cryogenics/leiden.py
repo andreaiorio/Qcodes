@@ -88,4 +88,4 @@ class LeidenFridge(Instrument):
         self.T_calibrations = self.T.columns.get_level_values(level=2).to_list()
 
         self.log_file(self._last_file)
-        self.log_file_last_update(self.df.tail(1).index.strftime('%Y-%m-%d %H:%M:%S').values[0])
+        self.log_file_last_update(self.df.tail(1).index.strftime(self.log_dateformat).values[0])
